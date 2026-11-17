@@ -1,0 +1,39 @@
+<main class="resume">
+  <app-header
+    [fullName]="fullName"
+    [location]="location"
+    [email]="email"
+    [phone]="phone"
+    [profile]="profile" />
+
+  <app-profile-card
+    cardTitle="A Little About Me"
+    description="I am a student learning to build modern web applications with Angular."
+    [tags]="['Angular', 'Reusable component']" />
+
+  <app-skills
+    [skills]="skills"
+    (skillSelected)="onSkillSelected($event)" />
+
+  <section class="interaction">
+    <h2 class="section-title">Angular Interaction</h2>
+    <p>{{ message }}</p>
+  </section>
+
+  <section>
+    <h2 class="section-title">Projects</h2>
+    <div class="projects">
+      @for (project of projects; track project.title) {
+        <app-profile-card
+          [cardTitle]="project.title"
+          [description]="project.description"
+          [tags]="project.tags"
+          [link]="project.link" />
+      }
+    </div>
+  </section>
+
+  <app-footer
+    [fullName]="fullName"
+    [proficiencies]="proficiencies" />
+</main>

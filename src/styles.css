@@ -1,0 +1,62 @@
+/* Global styles: apply to every component in the application. */
+:root {
+  --bg: #1b130f;
+  --panel: #0d0907;
+  --panel-2: #17100c;
+  --copper: #8c5a37;
+  --copper-dark: #4a2f1e;
+  --cream: #eadfc8;
+  --tan: #a99a82;
+  --red: #c4301f;
+  --red-text: #e5533d;
+  --gold: #d6a548;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--cream);
+  font-family: 'Archivo', Arial, Helvetica, sans-serif;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--gold);
+  text-underline-offset: 4px;
+}
+
+a:hover {
+  color: var(--cream);
+}
+
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: var(--red);
+  color: var(--cream);
+}
+
+section {
+  margin: 26px 0;
+}
+
+/* Shared heading style, used by several components. */
+.section-title {
+  color: var(--cream);
+  border-bottom: 1px solid var(--copper);
+  border-left: 4px solid var(--red);
+  padding: 0 0 6px 12px;
+  text-transform: uppercase;
+  font-size: 1.15rem;
+  font-weight: 800;
+  font-stretch: 80%;
+  letter-spacing: 2px;
+}
